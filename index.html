@@ -63,15 +63,12 @@ RUNNING TEXT
 }
 
 @keyframes marquee{
-
     0%{
         transform:translateX(0);
     }
-
     100%{
         transform:translateX(-100%);
     }
-
 }
 
 /* =========================
@@ -286,15 +283,12 @@ DESKTOP
 ========================= */
 
 @media(min-width:700px){
-
     .design-grid{
         grid-template-columns:repeat(4,1fr);
     }
-
     .banner-container{
         height:400px;
     }
-
 }
 
 </style>
@@ -303,98 +297,38 @@ DESKTOP
 
 <body>
 
-<!-- =========================
-HEADER
-========================= -->
-
 <div class="header">
-
     <div class="business-name" id="businessName">
         Henna By Ramya
     </div>
-
 </div>
-
-<!-- =========================
-RUNNING TEXT
-========================= -->
 
 <div class="marquee">
-
     <span id="runningText">
-       ✨ அனைத்து சுப நிகழ்ச்சிகளுக்கும் மிகக் குறைந்த விலையில், நேர்த்தியான முறையில் மெஹந்தி டிசைன் செய்து தரப்படும்! உடனே உங்கள் தேதியை புக் செய்யுங்கள்! 📞 [9500996515] ✨ மணப்பெண் மெஹந்தி (Bridal), வளைகாப்பு (Baby Shower), அரபிக் (Arabic),என அனைத்தும் ஒரே இடத்தில்! ✨
-    </span>
-
+        </span>
 </div>
-
-<!-- =========================
-BANNER
-========================= -->
 
 <div class="banner-container" id="bannerContainer"></div>
 
-<!-- =========================
-CATEGORY
-========================= -->
-
 <div class="category-wrapper" id="categoryWrapper"></div>
 
-<!-- =========================
-DESIGNS
-========================= -->
-
 <div class="design-area">
-
     <div class="design-grid" id="designGrid"></div>
-
     <div class="loading">
         Scroll Down To Load More Designs
     </div>
-
 </div>
 
-<!-- =========================
-ORDER MODAL
-========================= -->
-
 <div class="modal" id="modal">
-
     <div class="modal-content">
-
         <h3>Book Mehandhi</h3>
-
-        <input
-            type="text"
-            id="customerName"
-            placeholder="Enter Your Name"
-        >
-
-        <input
-            type="text"
-            id="customerArea"
-            placeholder="Enter Your Area"
-        >
-
+        <input type="text" id="customerName" placeholder="Enter Your Name">
+        <input type="text" id="customerArea" placeholder="Enter Your Area">
         <div class="modal-buttons">
-
-            <button
-                class="cancel-btn"
-                onclick="closeModal()"
-            >
-                Cancel
-            </button>
-
-            <button
-                class="send-btn"
-                onclick="sendWhatsApp()"
-            >
-                WhatsApp
-            </button>
-
+            <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+            <button class="send-btn" onclick="sendWhatsApp()">WhatsApp</button>
         </div>
-
     </div>
-
 </div>
 
 <script>
@@ -403,23 +337,13 @@ ORDER MODAL
 CHANGE BUSINESS NAME HERE
 ========================================================= */
 
-document.getElementById("businessName").innerText =
-"Ramya Mehandhi Artist";
+document.getElementById("businessName").innerText = "Henna By Ramya";
 
 /* =========================================================
 CHANGE RUNNING TEXT HERE
 ========================================================= */
 
-document.getElementById("runningText").innerText =
-"✨ அனைத்து சுப நிகழ்ச்சிகளுக்கும் மிகக் குறைந்த விலையில், நேர்த்தியான முறையில் மெஹந்தி டிசைன் செய்து தரப்படும்! உடனே உங்கள் தேதியை புக் செய்யுங்கள்! 📞 [9500996515] ✨ மணப்பெண் மெஹந்தி (Bridal), வளைகாப்பு (Baby Shower), அரபிக் (Arabic),என அனைத்தும் ஒரே இடத்தில்! ✨
-    </span>
-
-</div>
-
-<!-- =========================
-BANNER
-========================= -->
-";
+document.getElementById("runningText").innerText = "✨ அனைத்து சுப நிகழ்ச்சிகளுக்கும் நேர்த்தியான முறையில் மெஹந்தி டிசைன் செய்து தரப்படும்! உடனே உங்கள் தேதியை புக் செய்யுங்கள்! 📞9500996515 ✨ மணப்பெண் மெஹந்தி (Bridal), வளைகாப்பு (Baby Shower), அரபிக் (Arabic),என அனைத்தும் ஒரே இடத்தில்! ✨";
 
 /* =========================================================
 CHANGE WHATSAPP NUMBER HERE
@@ -430,339 +354,151 @@ const whatsappNumber = "919500996515";
 
 /* =========================================================
 BANNERS
-PUT IMAGES INSIDE:
-assets/banners/
+PUT IMAGES INSIDE: assets/banners/
 ========================================================= */
 
 const banners = [
-
-"assets/banners/banner1.jpg",
-"assets/banners/banner2.jpg",
-"assets/banners/banner3.jpg",
-"assets/banners/banner4.jpg"
-
+    "assets/banners/banner1.jpg",
+    "assets/banners/banner2.jpg",
+    "assets/banners/banner3.jpg",
+    "assets/banners/banner4.jpg"
 ];
 
 /* =========================================================
 CATEGORIES
-PUT ICONS INSIDE:
-assets/category-icons/
-
-ADD / EDIT / RENAME HERE
+PUT ICONS INSIDE: assets/category-icons/
 ========================================================= */
 
 const categories = [
-
-{
-    id:"all",
-    name:"All",
-    icon:"assets/category-icons/all.png"
-},
-
-{
-    id:"bridal",
-    name:"Bridal",
-    icon:"assets/category-icons/bridal.png"
-},
-
-{
-    id:"baby",
-    name:"Baby Shower",
-    icon:"assets/category-icons/baby.png"
-},
-
-{
-    id:"arabic",
-    name:"Arabic",
-    icon:"assets/category-icons/arabic.png"
-},
-
-{
-    id:"simple",
-    name:"Simple",
-    icon:"assets/category-icons/simple.png"
-},
-
-{
-    id:"festival",
-    name:"Festival",
-    icon:"assets/category-icons/festival.png"
-}
-
+    { id:"all", name:"All", icon:"assets/category-icons/all.png" },
+    { id:"bridal", name:"Bridal", icon:"assets/category-icons/bridal.png" },
+    { id:"baby", name:"Baby Shower", icon:"assets/category-icons/baby.png" },
+    { id:"arabic", name:"Arabic", icon:"assets/category-icons/arabic.png" },
+    { id:"festival", name:"Festival", icon:"assets/category-icons/festival.png" }
 ];
 
 /* =========================================================
 DESIGNS
-PUT IMAGES INSIDE:
-assets/designs/
-
-ADD / EDIT / RENAME HERE
+PUT IMAGES INSIDE: assets/designs/
 ========================================================= */
 
 const designs = [
-
-{
-    category:"bridal",
-    title:"Bridal Design 1",
-    image:"assets/designs/bridal1.jpg"
-},
-
-{
-    category:"bridal",
-    title:"Bridal Design 2",
-    image:"assets/designs/bridal2.jpg"
-},
-
-{
-    category:"bridal",
-    title:"Bridal Design 3",
-    image:"assets/designs/bridal3.jpg"
-},
-
-{
-    category:"baby",
-    title:"Baby Shower Design 1",
-    image:"assets/designs/baby1.jpg"
-},
-
-{
-    category:"baby",
-    title:"Baby Shower Design 2",
-    image:"assets/designs/baby2.jpg"
-},
-
-{
-    category:"arabic",
-    title:"Arabic Design 1",
-    image:"assets/designs/arabic1.jpg"
-},
-
-{
-    category:"arabic",
-    title:"Arabic Design 2",
-    image:"assets/designs/arabic2.jpg"
-},
-
-{
-    category:"simple",
-    title:"Simple Design 1",
-    image:"assets/designs/simple1.jpg"
-},
-
-{
-    category:"simple",
-    title:"Simple Design 2",
-    image:"assets/designs/simple2.jpg"
-},
-
-{
-    category:"festival",
-    title:"Festival Design 1",
-    image:"assets/designs/festival1.jpg"
-},
-
-{
-    category:"festival",
-    title:"Festival Design 2",
-    image:"assets/designs/festival2.jpg"
-}
-
+    { category:"bridal", title:"Bridal Design 1", image:"assets/designs/bridal1.jpg" },
+    { category:"bridal", title:"Bridal Design 2", image:"assets/designs/bridal2.jpg" },
+    { category:"bridal", title:"Bridal Design 3", image:"assets/designs/bridal3.jpg" },
+    { category:"baby", title:"Baby Shower Design 1", image:"assets/designs/baby1.jpg" },
+    { category:"baby", title:"Baby Shower Design 2", image:"assets/designs/baby2.jpg" },
+    { category:"arabic", title:"Arabic Design 1", image:"assets/designs/arabic1.jpg" },
+    { category:"arabic", title:"Arabic Design 2", image:"assets/designs/arabic2.jpg" },
+    { category:"festival", title:"Festival Design 1", image:"assets/designs/festival1.jpg" },
+    { category:"festival", title:"Festival Design 2", image:"assets/designs/festival2.jpg" }
 ];
 
 /* =========================================================
 BANNER LOADER
 ========================================================= */
 
-const bannerContainer =
-document.getElementById("bannerContainer");
+const bannerContainer = document.getElementById("bannerContainer");
 
 banners.forEach((img,index)=>{
-
     bannerContainer.innerHTML += `
-
         <div class="banner ${index === 0 ? 'active' : ''}">
-
             <img src="${img}">
-
         </div>
-
     `;
-
 });
 
-const bannerElements =
-document.querySelectorAll(".banner");
-
+const bannerElements = document.querySelectorAll(".banner");
 let bannerIndex = 0;
 
 setInterval(()=>{
-
-    bannerElements[bannerIndex]
-    .classList.remove("active");
-
+    bannerElements[bannerIndex].classList.remove("active");
     bannerIndex++;
-
     if(bannerIndex >= bannerElements.length){
-
         bannerIndex = 0;
-
     }
-
-    bannerElements[bannerIndex]
-    .classList.add("active");
-
+    bannerElements[bannerIndex].classList.add("active");
 },5000);
 
 /* =========================================================
 CATEGORY LOADER
 ========================================================= */
 
-const categoryWrapper =
-document.getElementById("categoryWrapper");
-
+const categoryWrapper = document.getElementById("categoryWrapper");
 let currentCategory = "all";
 
 categories.forEach((cat,index)=>{
-
     const div = document.createElement("div");
-
     div.className = "category";
-
     if(index === 0){
-
         div.classList.add("active");
-
     }
-
     div.innerHTML = `
-
         <div class="category-icon">
-
             <img src="${cat.icon}">
-
         </div>
-
         <div class="category-name">
-
             ${cat.name}
-
         </div>
-
     `;
 
     div.onclick = ()=>{
-
-        document.querySelectorAll(".category")
-        .forEach(item=>{
-
+        document.querySelectorAll(".category").forEach(item=>{
             item.classList.remove("active");
-
         });
-
         div.classList.add("active");
-
         currentCategory = cat.id;
-
         resetDesigns();
-
     };
-
     categoryWrapper.appendChild(div);
-
 });
 
 /* =========================================================
 DESIGN LOADER
 ========================================================= */
 
-const designGrid =
-document.getElementById("designGrid");
-
+const designGrid = document.getElementById("designGrid");
 let currentIndex = 0;
-
 const loadCount = 6;
 
 function getFilteredDesigns(){
-
     if(currentCategory === "all"){
-
         return designs;
-
     }
-
-    return designs.filter(item=>
-        item.category === currentCategory
-    );
-
+    return designs.filter(item=> item.category === currentCategory);
 }
 
 function loadDesigns(){
-
     const filtered = getFilteredDesigns();
-
-    const nextItems = filtered.slice(
-        currentIndex,
-        currentIndex + loadCount
-    );
+    const nextItems = filtered.slice(currentIndex, currentIndex + loadCount);
 
     nextItems.forEach(item=>{
-
         designGrid.innerHTML += `
-
             <div class="design-card">
-
                 <img src="${item.image}">
-
                 <div class="design-info">
-
-                    <div class="design-title">
-
-                        ${item.title}
-
-                    </div>
-
-                    <button
-                        class="order-btn"
-                        onclick="openModal('${item.title}')"
-                    >
-
+                    <div class="design-title">${item.title}</div>
+                    <button class="order-btn" onclick="openModal('${item.title}')">
                         Order Now
-
                     </button>
-
                 </div>
-
             </div>
-
         `;
-
     });
 
     currentIndex += loadCount;
-
 }
 
 function resetDesigns(){
-
     designGrid.innerHTML = "";
-
     currentIndex = 0;
-
     loadDesigns();
-
 }
 
 window.addEventListener("scroll",()=>{
-
-    if(
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 400
-    ){
-
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 400){
         loadDesigns();
-
     }
-
 });
 
 /* =========================================================
@@ -772,19 +508,12 @@ MODAL
 let selectedDesign = "";
 
 function openModal(design){
-
     selectedDesign = design;
-
-    document.getElementById("modal").style.display =
-    "flex";
-
+    document.getElementById("modal").style.display = "flex";
 }
 
 function closeModal(){
-
-    document.getElementById("modal").style.display =
-    "none";
-
+    document.getElementById("modal").style.display = "none";
 }
 
 /* =========================================================
@@ -792,38 +521,18 @@ WHATSAPP
 ========================================================= */
 
 function sendWhatsApp(){
-
-    const name =
-    document.getElementById("customerName").value;
-
-    const area =
-    document.getElementById("customerArea").value;
+    const name = document.getElementById("customerName").value;
+    const area = document.getElementById("customerArea").value;
 
     if(name === "" || area === ""){
-
         alert("Please Enter Name And Area");
-
         return;
-
     }
 
-    const message =
-
-`Hello Ramya,
-
-I Want To Book This Design
-
-Design : ${selectedDesign}
-
-Customer Name : ${name}
-
-Area : ${area}`;
-
-    const url =
-`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
+    const message = `Hello Ramya,\n\nI Want To Book This Design\nDesign : ${selectedDesign}\nCustomer Name : ${name}\nArea : ${area}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
     window.open(url,"_blank");
-
 }
 
 /* =========================================================
